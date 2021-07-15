@@ -5,8 +5,8 @@
  * QWERTY
  */
 
-import * as K from '../symbol/key';
-import * as M from '../symbol/modifier';
+import * as K from './symbol/key';
+import * as M from './symbol/modifier';
 
 export const MAP = {
 	Digit0: K.DIGIT_0,
@@ -78,17 +78,17 @@ export const MAP = {
 	F11: K.F11,
 	F12: K.F12,
 
-	NumLock: K.NumLock,
-	Numpad0: K.Numpad0,
-	Numpad1: K.Numpad1,
-	Numpad2: K.Numpad2,
-	Numpad3: K.Numpad3,
-	Numpad4: K.Numpad4,
-	Numpad5: K.Numpad5,
-	Numpad6: K.Numpad6,
-	Numpad7: K.Numpad7,
-	Numpad8: K.Numpad8,
-	Numpad9: K.Numpad9,
+	NumLock:        K.NumLock,
+	Numpad0:        K.Numpad0,
+	Numpad1:        K.Numpad1,
+	Numpad2:        K.Numpad2,
+	Numpad3:        K.Numpad3,
+	Numpad4:        K.Numpad4,
+	Numpad5:        K.Numpad5,
+	Numpad6:        K.Numpad6,
+	Numpad7:        K.Numpad7,
+	Numpad8:        K.Numpad8,
+	Numpad9:        K.Numpad9,
 	NumpadDecimal:  K.NumpadDecimal,
 	NumpadAdd:      K.NumpadAdd,
 	NumpadSubtract: K.NumpadSubtract,
@@ -123,10 +123,27 @@ export const MAP = {
 	Delete:        K.Delete,
 	ContextMenu:   K.ContextMenu,
 
+	MediaTrackPrevious: K.MediaTrackPrevious,
+	MediaTrackNext:     K.MediaTrackNext,
+	MediaPlayPause:     K.MediaPlayPause,
+	MediaStop:          K.MediaStop,
+
+	AudioVolumeMute:    K.AudioVolumeMute,
+	AudioVolumeDown:    K.AudioVolumeDown,
+	AudioVolumeUp:      K.AudioVolumeUp,
+
+	BrowserHome:       K.BrowserHome,
+	BrowserSearch:     K.BrowserSearch,
+	BrowserFavorites:  K.BrowserFavorites,
+	BrowserRefresh:    K.BrowserRefresh,
+	BrowserStop:       K.BrowserStop,
+	BrowserForward:    K.BrowserForward,
+	BrowserBack:       K.BrowserBack,
+
 	// IntlBackslash: 0x0056,
 	// PrintScreen:   0xE037,
 };
 
-export const to = code => {
+export const from = code => {
 	return code in MAP ? MAP[code] : null;
 };

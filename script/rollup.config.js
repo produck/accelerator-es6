@@ -5,7 +5,7 @@ import { eslint } from 'rollup-plugin-eslint';
 
 const meta = require('../package.json');
 
-const MODULE_NAME = 'menu';
+const MODULE_NAME = 'shortcut';
 const BANNER =
 	'/*!\n' +
 	` * ${meta.name} v${meta.version}\n` +

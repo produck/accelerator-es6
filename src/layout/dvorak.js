@@ -1,4 +1,4 @@
-import * as K from '../symbol/key';
+import * as K from './symbol/key';
 import { MAP as QWERTY_MAP } from './qwerty';
 
 const MAP = Object.assign({}, QWERTY_MAP, {
@@ -32,15 +32,15 @@ const MAP = Object.assign({}, QWERTY_MAP, {
 	KeyY: K.KeyF,
 	KeyZ: K.Semicolon,
 
-	Quote: K.MINUS,
-	Backslash: K.KeyZ,
-	Comma: K.KeyW,
-	Period: K.KeyV,
-	Semicolon: K.KeyS,
-	BracketLeft: K.Backslash,
-	BracketRight: K.EQUAL,
+	Quote:         K.MINUS,
+	Backslash:     K.KeyZ,
+	Comma:         K.KeyW,
+	Period:        K.KeyV,
+	Semicolon:     K.KeyS,
+	BracketLeft:   K.Backslash,
+	BracketRight:  K.EQUAL,
 });
 
-export const to = code => {
+export const from = code => {
 	return code in MAP ? MAP[code] : null;
 };

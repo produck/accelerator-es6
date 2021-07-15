@@ -4,7 +4,10 @@
   "description": "An accelerator manager in a web page.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./dist",
+		"build:js": "rollup --config script/rollup.config.js",
+    "build": "npm run clean && npm run build:js",
+    "dev": "rollup --config script/rollup.config.dev.js --watch"
   },
   "repository": {
     "type": "git",
