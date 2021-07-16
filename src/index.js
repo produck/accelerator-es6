@@ -8,7 +8,7 @@ const INIT_HOLDING = 0b0000000000000000;
 const NOOP = () => {};
 
 let
-	listenerMap = {},
+	listenerMap = window.a = {},
 	holding = INIT_HOLDING,
 	currentKeyboard = KEYBOARD.QWERTY;
 
@@ -44,3 +44,4 @@ const isHolding = key => (holding & key) === key;
 
 export { KEYBOARD, KEY, MODIFIER };
 export { register, unregister, setKeyboard, unregisterAll, isHolding };
+export * as Combinator from './combinator';
