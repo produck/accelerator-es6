@@ -10,8 +10,6 @@ export const normalizeModifierCombination = (_combination = {}) => {
 		meta: false
 	};
 
-	console.log(_combination);
-
 	const {
 		control: _control = combination.control,
 		alt: _alt = combination.alt,

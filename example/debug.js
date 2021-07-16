@@ -1,15 +1,17 @@
-import { KEYBOARD, MODIFIER, KEY, register } from '../src/index';
-import { CmdOrCtrl } from '../src/combinator';
+import { KEYBOARD, MODIFIER, KEY, register, Combinator, setKeyboard } from '../src/index';
+const { CmdOrCtrl, Control, Shift } = Combinator;
 
 window.addEventListener('load', () => {
 	document.body.appendChild(document.createElement('input'));
 
-	console.log(CmdOrCtrl({ alt: true }));
-
 	register({
-		key: KEY.DIGIT_7,
+		key: KEY.MINUS,
 		modifiers: [
-			...CmdOrCtrl({ alt: true })
+			...CmdOrCtrl({ alt: true }),
+			Control(Shift()),
+			{ alt: true }
 		]
 	}, () => console.log('fuck'));
+
+	// setKeyboard(KEYBOARD.DVORAK);
 });

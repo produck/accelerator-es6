@@ -8,7 +8,7 @@ const INIT_HOLDING = 0b0000000000000000;
 const NOOP = () => {};
 
 let
-	listenerMap = window.a = {},
+	listenerMap = {},
 	holding = INIT_HOLDING,
 	currentKeyboard = KEYBOARD.QWERTY;
 

@@ -26,6 +26,24 @@ export namespace KEYBOARD {
 	const DVORAK: Keyboard;
 }
 
+export namespace Combinator {
+
+	function CommandOrControl(combination: ModifierCombination): ModifierCombination[];
+	const CmdOrCtrl = CommandOrControl;
+
+	function Meta(combination: ModifierCombination): ModifierCombination;
+	const Command = Meta;
+	const Cmd = Meta;
+	const Super = Meta;
+
+	function Alt(combination: ModifierCombination): ModifierCombination;
+	const Option = Alt;
+
+	function Control(combination: ModifierCombination): ModifierCombination;
+
+	function Shift(combination: ModifierCombination): ModifierCombination;
+}
+
 export namespace KEY {
 	const
 		DIGIT_0: Key,
